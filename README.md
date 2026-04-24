@@ -21,7 +21,6 @@ This repository contains the implementation of the predictive maintenance models
 * **Practical Application**: Validated on real-world packaging film slitting machines utilizing tension, pressure, width, and diameter IoT sensor telemetry.
 * **Business Impact**: Demonstrated a **3.2:1 return on investment** by significantly reducing unplanned operational downtime.
 
-<br>
 
 ## Project Structure
 
@@ -31,7 +30,6 @@ The project is structured as a full-stack monorepo featuring a decoupled fronten
 * **`/backend`** — A high-performance FastAPI Python application exposing the API and housing the Machine Learning inference pipelines.
 * **`/models`** — Pre-trained hybrid models ready for anomaly detection and Remaining Useful Life (RUL) prediction.
 
-<br>
 
 ## Getting Started
 
