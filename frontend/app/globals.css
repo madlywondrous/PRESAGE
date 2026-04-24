@@ -1,0 +1,381 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 0 0% 3.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 3.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 3.9%;
+
+    --primary: 0 0% 9%;
+    --primary-foreground: 0 0% 98%;
+
+    --secondary: 0 0% 96.1%;
+    --secondary-foreground: 0 0% 9%;
+
+    --muted: 0 0% 96.1%;
+    --muted-foreground: 0 0% 45.1%;
+
+    --accent: 0 0% 96.1%;
+    --accent-foreground: 0 0% 9%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 210 20% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 210 20% 98%;
+
+    --info: 217 91% 60%;
+    --info-foreground: 210 20% 98%;
+
+    --border: 0 0% 89.8%;
+    --input: 0 0% 89.8%;
+    --ring: 0 0% 3.9%;
+
+    --radius: 0.5rem;
+
+    --sidebar: 222.2 47.4% 11.2%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-muted: 223 47% 20%;
+    --sidebar-muted-foreground: 210 40% 80%;
+    --sidebar-card: 222.2 47.4% 14%;
+    --sidebar-card-foreground: 210 40% 98%;
+    --sidebar-border: 216 34% 17%;
+    --sidebar-input: 216 34% 17%;
+    --sidebar-ring: 224 71.4% 4.1%;
+
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 0 0% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 3.9%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 3.9%;
+    --popover-foreground: 0 0% 98%;
+
+    --primary: 0 0% 98%;
+    --primary-foreground: 0 0% 9%;
+
+    --secondary: 0 0% 14.9%;
+    --secondary-foreground: 0 0% 98%;
+
+    --muted: 0 0% 14.9%;
+    --muted-foreground: 0 0% 63.9%;
+
+    --accent: 0 0% 14.9%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
+
+    --success: 142 76% 36%;
+    --success-foreground: 210 20% 98%;
+
+    --warning: 38 92% 50%;
+    --warning-foreground: 210 20% 98%;
+
+    --info: 217 91% 60%;
+    --info-foreground: 210 20% 98%;
+
+    --border: 0 0% 14.9%;
+    --input: 0 0% 14.9%;
+    --ring: 0 0% 83.1%;
+
+    --sidebar: 222.2 47.4% 7%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-muted: 223 47% 11%;
+    --sidebar-muted-foreground: 210 40% 80%;
+    --sidebar-card: 222.2 47.4% 9%;
+    --sidebar-card-foreground: 210 40% 98%;
+    --sidebar-border: 216 34% 12%;
+    --sidebar-input: 216 34% 12%;
+    --sidebar-ring: 216 12.2% 83.9%;
+
+    --chart-1: 220 70% 50%;
+    --chart-2: 160 60% 45%;
+    --chart-3: 30 80% 55%;
+    --chart-4: 280 65% 60%;
+    --chart-5: 340 75% 55%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.5s ease-out;
+}
+
+.animate-slide-in {
+  animation: slideInUp 0.5s ease-out;
+}
+
+.animate-slide-right {
+  animation: slideInRight 0.5s ease-out;
+}
+
+.animate-pulse-slow {
+  animation: pulse 2s infinite;
+}
+
+.animate-bounce-slow {
+  animation: bounce 2s infinite;
+}
+
+/* Sidebar styles */
+.sidebar-bg {
+  @apply bg-[hsl(var(--sidebar))];
+}
+
+.sidebar-text {
+  @apply text-[hsl(var(--sidebar-foreground))];
+}
+
+.sidebar-muted {
+  @apply bg-[hsl(var(--sidebar-muted))];
+}
+
+.sidebar-muted-text {
+  @apply text-[hsl(var(--sidebar-muted-foreground))];
+}
+
+.sidebar-card {
+  @apply bg-[hsl(var(--sidebar-card))];
+}
+
+.sidebar-card-text {
+  @apply text-[hsl(var(--sidebar-card-foreground))];
+}
+
+.sidebar-border {
+  @apply border-[hsl(var(--sidebar-border))];
+}
+
+/* Mobile sidebar */
+.mobile-sidebar-container {
+  @apply fixed bottom-0 left-0 right-0 z-50 bg-transparent transition-all duration-300;
+}
+
+.mobile-sidebar-content {
+  @apply rounded-t-xl shadow-lg sidebar-bg sidebar-text p-4 transition-all duration-300 ease-in-out;
+}
+
+/* Card hover effect */
+.card-hover {
+  @apply transition-all duration-300 hover:shadow-md hover:-translate-y-1;
+}
+
+/* Button hover animation */
+.btn-hover {
+  @apply transition-all duration-300 hover:shadow-md active:scale-95;
+}
+
+/* Loading animation */
+.loading-spinner {
+  @apply animate-spin h-5 w-5 text-primary;
+}
+
+/* Chart animations */
+.chart-animate {
+  @apply transition-all duration-500 ease-in-out;
+}
+
+/* Responsive padding for main content */
+.main-content {
+  @apply p-4 md:p-6 lg:p-8;
+}
+
+/* Status indicators */
+.status-indicator {
+  @apply h-3 w-3 rounded-full;
+}
+
+.status-operational {
+  @apply bg-green-500;
+}
+
+.status-warning {
+  @apply bg-yellow-500;
+}
+
+.status-critical {
+  @apply bg-red-500;
+}
+
+.status-maintenance {
+  @apply bg-blue-500;
+}
+
+/* Health score colors */
+.health-good {
+  @apply text-green-600;
+}
+
+.health-warning {
+  @apply text-yellow-600;
+}
+
+.health-critical {
+  @apply text-red-600;
+}
+
+/* Glassmorphism effect */
+.glass {
+  @apply bg-white/30 dark:bg-black/30 backdrop-blur-md border border-white/20 dark:border-white/10;
+}
+
+/* Dashboard card */
+.dashboard-card {
+  @apply rounded-xl border bg-card p-6 shadow-sm transition-all duration-200 hover:shadow-md;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent;
+}
+
+/* Gradient backgrounds */
+.gradient-bg-primary {
+  @apply bg-gradient-to-r from-blue-600 to-purple-600;
+}
+
+.gradient-bg-success {
+  @apply bg-gradient-to-r from-green-500 to-emerald-600;
+}
+
+.gradient-bg-warning {
+  @apply bg-gradient-to-r from-yellow-500 to-orange-600;
+}
+
+.gradient-bg-danger {
+  @apply bg-gradient-to-r from-red-500 to-rose-600;
+}
+
+/* Tooltip */
+.custom-tooltip {
+  @apply absolute z-50 rounded-md bg-popover px-3 py-1.5 text-xs text-popover-foreground shadow-md animate-fade-in;
+}
+
+/* Table styles */
+.table-row-hover {
+  @apply hover:bg-muted/50 transition-colors duration-150;
+}
+
+/* Form styles */
+.form-group {
+  @apply space-y-2 mb-4;
+}
+
+/* Alert styles */
+.alert-critical {
+  @apply bg-red-50 border-red-200 text-red-800 dark:bg-red-950 dark:border-red-900 dark:text-red-200;
+}
+
+.alert-warning {
+  @apply bg-yellow-50 border-yellow-200 text-yellow-800 dark:bg-yellow-950 dark:border-yellow-900 dark:text-yellow-200;
+}
+
+.alert-info {
+  @apply bg-blue-50 border-blue-200 text-blue-800 dark:bg-blue-950 dark:border-blue-900 dark:text-blue-200;
+}
+
+/* Scrollbar styles */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-muted-foreground/20 rounded-full;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-muted-foreground/30;
+}
+
+/* Print styles */
+@media print {
+  .no-print {
+    display: none;
+  }
+}
+
