@@ -1,9 +1,8 @@
-<div align="center">
-  <h1>PRESAGE</h1>
-  <p><b>Predictive Maintenance System for Industrial Equipment</b></p>
-  <p><i>An AI-driven predictive system that models machine behavior, uncovers hidden anomalies, and anticipates failures before they occur.</i></p>
-  <br/>
-</div>
+# PRESAGE
+
+**Predictive Maintenance System for Industrial Equipment**
+
+*An AI-driven predictive system that models machine behavior, uncovers hidden anomalies, and anticipates failures before they occur.*
 
 ## Research & Publication
 
