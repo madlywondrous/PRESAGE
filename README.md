@@ -2,7 +2,7 @@
 *Predictive Maintenance System for Industrial Equipment*
 *An AI-driven predictive system that models machine behavior, uncovers hidden anomalies, and anticipates failures before they occur.*
 
-## Research & Publication [![Read on IEEE Xplore](https://img.shields.io/badge/IEEE_Xplore-Read_Publication-00629B?style=for-the-badge&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11135975)
+## Research & Publication                                                   [![Read on IEEE Xplore](https://img.shields.io/badge/IEEE_Xplore-Read_Publication-00629B?style=for-the-badge&logo=ieee&logoColor=white)](https://ieeexplore.ieee.org/document/11135975)
 This repository contains the implementation of the predictive maintenance models and architecture detailed in our peer-reviewed IEEE publication.
 
 > **Machine Learning for Predictive Maintenance of Industrial Machines using IoT Sensor Data: A Case Study on Slitting Machines**<br>
