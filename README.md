@@ -1,5 +1,4 @@
-# PRESAGE
-**Predictive Maintenance System for Industrial Equipment**
+## PRESAGE - Predictive Maintenance System for Industrial Equipment
 *An AI-driven predictive system that models machine behavior, uncovers hidden anomalies, and anticipates failures before they occur.*
 
 ## Research & Publication                                                   
